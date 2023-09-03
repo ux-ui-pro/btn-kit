@@ -1,0 +1,65 @@
+{
+  "name": "btn-kit",
+  "version": "0.0.1-alpha.1",
+  "description": "btn-kit is a customizable button component for web apps with built-in features like icon support, predefined styles, various button types and sizes, and UI customization.",
+  "author": "ux-ui.pro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ux-ui-pro/btn-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ux-ui-pro/btn-kit/issues"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/btn-kit.umd.cjs",
+  "module": "./dist/btn-kit.js",
+  "exports": {
+    ".": {
+      "import": "./dist/btn-kit.js",
+      "require": "./dist/btn-kit.umd.cjs"
+    },
+    "./index.css": "./dist/index.css"
+  },
+  "exclude": [
+    "src/App.vue",
+    "src/main.js"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.4",
+    "vue": "^3.3.4",
+    "sass": "^1.66.1"
+  },
+  "keywords": [
+    "vue",
+    "button",
+    "ripple",
+    "component",
+    "custom",
+    "shape",
+    "rounded",
+    "round",
+    "sizes",
+    "buttons",
+    "variation",
+    "href",
+    "disabled",
+    "router",
+    "vuejs",
+    "click",
+    "progress",
+    "contained",
+    "outlined",
+    "text",
+    "theme"
+  ]
+}
