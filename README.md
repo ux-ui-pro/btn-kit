@@ -37,21 +37,28 @@ app.mount('#app');
 <sub>To use all the functionality of btn-kit, it is enough to create a button theme, to set its background color and text color.</sub>
 ```vue
 <template>
-	<Button theme="awesome-button">
-		<span class="label">Текст</span>
-	</Button>
+    <AppButton
+        theme="awesome"
+        size="lg"
+        variation="text"
+        shape="rounded"
+        disabled
+        ripple
+    >
+        <Icon id="icon_name"/>
+        <span class="label">Text</span>
+    </AppButton>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .btn--theme {
-    &-awesome-button {
+    &-awesome {
+        --vbk-background-h: 180;
+        --vbk-background-s: 100%;
+        --vbk-background-l: 25%;
         --vbk-color-h: 0;
         --vbk-color-s: 0%;
-        --vbk-color-l: 100%;
-
-        --vbk-background-h: 0;
-        --vbk-background-s: 53%;
-        --vbk-background-l: 58%;
+        --vbk-color-l: 90%;
     }
 }
 </style>
