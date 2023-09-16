@@ -207,7 +207,7 @@ export default {
 	user-select: none;
 	line-height: 1;
 	font-weight: var(--vbk-font-weight, 500);
-	letter-spacing: var(--vbk-letter-spacing, .1px);
+	letter-spacing: var(--vbk-letter-spacing, .1em);
 	-webkit-tap-highlight-color: transparent;
 	transform: translate3d(0, 0, 0);
 
@@ -322,7 +322,7 @@ export default {
 	}
 
 	&--progress {
-		--vbk-color-a: 0;
+		--vbk-color: transparent;
 
 		cursor: default;
 		pointer-events: none;

@@ -24,8 +24,14 @@ $ yarn add btn-kit
 ## Use
 <sub>import</sub>
 ```javascript
-import Button from 'btn-kit'
-import 'btn-kit/dist/style.css'
+import { createApp } from 'vue';
+import AppButton from 'btn-kit';
+import App from './App.vue';
+
+const app = createApp(App);
+
+app.component('AppButton', AppButton);
+app.mount('#app');
 ```
 
 <sub>To use all the functionality of btn-kit, it is enough to create a button theme, to set its background color and text color.</sub>
