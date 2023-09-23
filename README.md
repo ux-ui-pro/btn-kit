@@ -1,26 +1,3 @@
----
-title: "Untitled"
-author: "ux-ui.pro"
-output: html_document
----
-
-<style type="text/css">
-body{
-  font-size: 18pt;
-}
-</style>
-
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-
-
-
-
-
-
 <div align="center">
 <br>
 
@@ -49,9 +26,16 @@ $ yarn add btn-kit
 ```
 <br>
 
+# Import
+## Import
+### Import
+#### Import
+##### Import
+###### Import
+
 <p style="font-size: 18pt; font-weight: 600;">Import</p>
 <p style="font-size: 2em; font-weight: 600;">Import</p>
-<font size="6">Import</font>
+<p style="font-size: 20px;">Import</p>
 
 ```javascript
 import AppButton from 'btn-kit'
