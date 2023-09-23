@@ -135,7 +135,7 @@ export default {
 	&:not(&--merge) {
 		.btn {
 			&:not(:last-child) {
-				margin-right: var(--vbk-group-padding, 20px);
+				margin-right: var(--bk-group-padding, 20px);
 			}
 		}
 	}
@@ -180,14 +180,14 @@ export default {
 }
 
 .btn {
-	--vbk-background: hsla(var(--vbk-background-h, 0) var(--vbk-background-s, 0%) var(--vbk-background-l, 68%) / var(--vbk-background-a, 1));
-	--vbk-color: hsla(var(--vbk-color-h, 0) var(--vbk-color-s, 0%) var(--vbk-color-l, 0%) / var(--vbk-color-a, 1));
+	--bk-background: hsla(var(--bk-background-h, 0) var(--bk-background-s, 0%) var(--bk-background-l, 68%) / var(--bk-background-a, 1));
+	--bk-color: hsla(var(--bk-color-h, 0) var(--bk-color-s, 0%) var(--bk-color-l, 0%) / var(--bk-color-a, 1));
 
 	font-family: inherit;
-	font-size: var(--vbk-font-size, 16px);
-	background-color: var(--vbk-background);
-	color: var(--vbk-color);
-	height: var(--vbk-button-size, 52px);
+	font-size: var(--bk-font-size, 16px);
+	background-color: var(--bk-background);
+	color: var(--bk-color);
+	height: var(--bk-button-size, 52px);
 	overflow: hidden;
 	position: relative;
 	display: inline-flex;
@@ -199,92 +199,92 @@ export default {
 	border: none;
 	text-decoration: none;
 	text-align: center;
-	text-transform: var(--vbk-text-transform, uppercase);
+	text-transform: var(--bk-text-transform, uppercase);
 	white-space: nowrap;
 	outline: none;
 	cursor: pointer;
 	touch-action: manipulation;
 	user-select: none;
 	line-height: 1;
-	font-weight: var(--vbk-font-weight, 500);
-	letter-spacing: var(--vbk-letter-spacing, .1em);
+	font-weight: var(--bk-font-weight, 500);
+	letter-spacing: var(--bk-letter-spacing, .1em);
 	-webkit-tap-highlight-color: transparent;
 	transform: translate3d(0, 0, 0);
 
 	@include transition;
 
 	&:hover {
-		--vbk-background-hover-s: calc(var(--vbk-background-s, 0%) - 5%);
-		--vbk-background-hover-l: calc(var(--vbk-background-l, 68%) - 10%);
+		--bk-background-hover-s: calc(var(--bk-background-s, 0%) - 5%);
+		--bk-background-hover-l: calc(var(--bk-background-l, 68%) - 10%);
 
 		&:not(.btn--outlined):not(.btn--text) {
-			background-color: hsla(var(--vbk-background-h, 0) var(--vbk-background-hover-s, 0%) var(--vbk-background-hover-l, 68%) / var(--vbk-background-a, 1));
+			background-color: hsla(var(--bk-background-h, 0) var(--bk-background-hover-s, 0%) var(--bk-background-hover-l, 68%) / var(--bk-background-a, 1));
 		}
 
 		&:not(.btn--contained) {
-			background-color: hsla(var(--vbk-background-h, 0) var(--vbk-background-hover-s, 0%) var(--vbk-background-hover-l, 68%) / 0.08);
+			background-color: hsla(var(--bk-background-h, 0) var(--bk-background-hover-s, 0%) var(--bk-background-hover-l, 68%) / 0.08);
 		}
 	}
 
 	&:active {
-		--vbk-background-active-s: calc(var(--vbk-background-s, 0%) - 7.5%);
-		--vbk-background-active-l: calc(var(--vbk-background-l, 68%) - 25%);
+		--bk-background-active-s: calc(var(--bk-background-s, 0%) - 7.5%);
+		--bk-background-active-l: calc(var(--bk-background-l, 68%) - 25%);
 
 		&:not(.btn--ripple):not(.btn--outlined):not(.btn--text) {
-			background-color: hsla(var(--vbk-background-h, 0) var(--vbk-background-active-s, 0%) var(--vbk-background-active-l, 68%) / var(--vbk-background-a, 1));
+			background-color: hsla(var(--bk-background-h, 0) var(--bk-background-active-s, 0%) var(--bk-background-active-l, 68%) / var(--bk-background-a, 1));
 		}
 
 		&:not(.btn--ripple) {
-			background-color: hsla(var(--vbk-background-h, 0) var(--vbk-background-active-s, 0%) var(--vbk-background-active-l, 68%) / .28);
+			background-color: hsla(var(--bk-background-h, 0) var(--bk-background-active-s, 0%) var(--bk-background-active-l, 68%) / .28);
 		}
 	}
 
 	.label {
 		position: relative;
 		z-index: 1;
-		margin: 0 calc(var(--vbk-button-size, 52px) / 2);
+		margin: 0 calc(var(--bk-button-size, 52px) / 2);
 
 		+ [class*="icon"]:last-child {
-			margin-right: calc(var(--vbk-button-size, 52px) / 2);
-			margin-left: calc(var(--vbk-button-size, 52px) / 3 * -1);
-			transform: translateX(calc(var(--vbk-button-size) / 8));
+			margin-right: calc(var(--bk-button-size, 52px) / 2);
+			margin-left: calc(var(--bk-button-size, 52px) / 3 * -1);
+			transform: translateX(calc(var(--bk-button-size) / 8));
 		}
 	}
 
 	[class*="icon"] {
-		fill: var(--vbk-color);
-		width: var(--vbk-icon-size, 24px);
-		height: var(--vbk-icon-size, 24px);
+		fill: var(--bk-color);
+		width: var(--bk-icon-size, 24px);
+		height: var(--bk-icon-size, 24px);
 
 		@include transition;
 
 		&:first-child {
-			margin: 0 calc(calc(var(--vbk-button-size, 52px) / 2) + calc(var(--vbk-icon-size, 24px) * -1 / 2));
+			margin: 0 calc(calc(var(--bk-button-size, 52px) / 2) + calc(var(--bk-icon-size, 24px) * -1 / 2));
 		}
 
 		&:not(:last-child) {
-			margin-right: calc(var(--vbk-button-size, 52px) / 3 * -1);
-			margin-left: calc(var(--vbk-button-size, 52px) / 2);
-			transform: translateX(calc(var(--vbk-button-size) / 8 * -1));
+			margin-right: calc(var(--bk-button-size, 52px) / 3 * -1);
+			margin-left: calc(var(--bk-button-size, 52px) / 2);
+			transform: translateX(calc(var(--bk-button-size) / 8 * -1));
 		}
 	}
 
 	&--rounded {
-		border-radius: var(--vbk-rounded-radius, 4px);
+		border-radius: var(--bk-rounded-radius, 4px);
 	}
 
 	&--round {
-		border-radius: var(--vbk-round-radius, 100px);
+		border-radius: var(--bk-round-radius, 100px);
 	}
 
 	&--outlined {
-		--vbk-color: var(--vbk-background);
+		--bk-color: var(--bk-background);
 
 		background-color: transparent;
-		box-shadow: inset 0 0 0 var(--vbk-border-width, 1px) var(--vbk-outline-color, var(--vbk-background));
+		box-shadow: inset 0 0 0 var(--bk-border-width, 1px) var(--bk-outline-color, var(--bk-background));
 
 		[class*="icon"] {
-			--vbk-color: var(--vbk-background);
+			--bk-color: var(--bk-background);
 		}
 	}
 
@@ -292,25 +292,25 @@ export default {
 		background-color: transparent;
 
 		&:not(.btn--progress):not(.btn--disabled) {
-			--vbk-color: var(--vbk-background);
+			--bk-color: var(--bk-background);
 		}
 	}
 
 	&--rippled {
 		&::before {
 			content: '';
-			background-color: var(--vbk-ripple-background, hsl(0 0% 50%));
+			background-color: var(--bk-ripple-background, hsl(0 0% 50%));
 			width: var(--size); height: var(--size);
 			min-width: var(--size); min-height: var(--size);
 			position: absolute;
 			top: var(--top); left: var(--left);
 			border-radius: 100%;
-			animation: ripple var(--vbk-ripple-speed, 750ms) cubic-bezier(0.61, 1, 0.88, 1);
+			animation: ripple var(--bk-ripple-speed, 750ms) cubic-bezier(0.61, 1, 0.88, 1);
 			transform-origin: center;
 			pointer-events: none;
-			mix-blend-mode: var(--vbk-ripple-mix-blend, luminosity);
+			mix-blend-mode: var(--bk-ripple-mix-blend, luminosity);
 			transform: scale(0);
-			opacity: var(--vbk-ripple-opacity, .8);
+			opacity: var(--bk-ripple-opacity, .8);
 
 			@keyframes ripple {
 				to {
@@ -322,7 +322,7 @@ export default {
 	}
 
 	&--progress {
-		--vbk-color: transparent;
+		--bk-color: transparent;
 
 		cursor: default;
 		pointer-events: none;
@@ -355,10 +355,10 @@ export default {
 
 	&--disabled,
 	&[disabled] {
-		--vbk-color-s: 0%;
-		--vbk-color-l: 60%;
-		--vbk-background-s: 0%;
-		--vbk-background-l: 75%;
+		--bk-color-s: 0%;
+		--bk-color-l: 60%;
+		--bk-background-s: 0%;
+		--bk-background-l: 75%;
 
 		cursor: default;
 		pointer-events: none;

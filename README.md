@@ -50,12 +50,12 @@ app.component('AppButton', AppButton)
 <style lang="scss">
 .btn--theme {
     &-awesome {
-        --vbk-background-h: 180;
-        --vbk-background-s: 100%;
-        --vbk-background-l: 25%;
-        --vbk-color-h: 0;
-        --vbk-color-s: 0%;
-        --vbk-color-l: 90%;
+        --bk-background-h: 180;
+        --bk-background-s: 100%;
+        --bk-background-l: 25%;
+        --bk-color-h: 0;
+        --bk-color-s: 0%;
+        --bk-color-l: 90%;
     }
 }
 </style>
