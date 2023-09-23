@@ -21,8 +21,7 @@
     ".": {
       "import": "./dist/btn-kit.js",
       "require": "./dist/btn-kit.umd.cjs"
-    },
-    "./index.css": "./dist/index.css"
+    }
   },
   "exclude": [
     "src/App.vue",
