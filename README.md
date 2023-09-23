@@ -1,41 +1,33 @@
 <div align="center">
 <br>
 
-<p style="font-size: 24pt; font-weight: 600;">btn-kit</p>
+**btn-kit**
+
 <sup>btn-kit is a Vue 3 component for creating buttons for web applications.<br>
 Built-in features include icon support, different button types and sizes, states, effects.</sup>
+<br>
 
 [![npm](https://img.shields.io/npm/v/btn-kit.svg?colorB=brightgreen)](https://www.npmjs.com/package/btn-kit)
 [![GitHub package version](https://img.shields.io/github/package-json/v/ux-ui-pro/btn-kit.svg)](https://github.com/ux-ui-pro/btn-kit)
 [![NPM Downloads](https://img.shields.io/npm/dm/btn-kit.svg?style=flat)](https://www.npmjs.org/package/btn-kit)
 
+
 <sup>1kB gzipped</sup>
 
-<p style="font-size: 14pt; font-weight: 400; line-height: 2;">
-<a href="https://btn-kit.ux-ui.pro/build">Constructor</a><br>
+<p><a href="https://btn-kit.ux-ui.pro/build">Constructor</a><br>
 <a href="https://qpgzlf.csb.app/">Sandbox</a><br>
-<a href="https://btn-kit.ux-ui.pro/docs">Docs</a>
-</p>
+<a href="https://btn-kit.ux-ui.pro/docs">Docs</a></p>
 </div>
 <br>
 
-<p style="font-size: 18pt; font-weight: 600;">Install</p>
+**Install**
 
 ```bash
 $ yarn add btn-kit
 ```
 <br>
 
-# Import
-## Import
-### Import
-#### Import
-##### Import
-###### Import
-
-<p style="font-size: 18pt; font-weight: 600;">Import</p>
-<p style="font-size: 2em; font-weight: 600;">Import</p>
-<p style="font-size: 20px;">Import</p>
+**Import**
 
 ```javascript
 import AppButton from 'btn-kit'
@@ -45,7 +37,7 @@ app.component('AppButton', AppButton)
 ```
 <br>
 
-<p style="font-size: 18pt; font-weight: 600;">Usage</p>
+**Usage**
 
 ```vue
 <template>
@@ -72,6 +64,6 @@ app.component('AppButton', AppButton)
 ```
 <br>
 
-<p style="font-size: 18pt; font-weight: 600;">License</p>
+**License**
 
 btn-kit is released under MIT license
