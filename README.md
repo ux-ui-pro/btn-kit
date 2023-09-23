@@ -27,6 +27,8 @@ $ yarn add btn-kit
 <br>
 
 <p style="font-size: 18pt; font-weight: 600;">Import</p>
+<p style="font-size: 2em; font-weight: 600;">Import</p>
+<font size="6">Import</font>
 
 ```javascript
 import AppButton from 'btn-kit'
