@@ -1,23 +1,21 @@
+<br>
+<p align="center"><strong>btn-kit</strong></p>
+
+<p align="center"><sup>btn-kit is a Vue 3 component for creating buttons for web applications.<br>Built-in features include icon support, different button types and sizes, states, effects.</sup></p>
+
 <div align="center">
-<br>
-
-**btn-kit**
-
-<sup>btn-kit is a Vue 3 component for creating buttons for web applications.<br>
-Built-in features include icon support, different button types and sizes, states, effects.</sup>
-<br>
 
 [![npm](https://img.shields.io/npm/v/btn-kit.svg?colorB=brightgreen)](https://www.npmjs.com/package/btn-kit)
 [![GitHub package version](https://img.shields.io/github/package-json/v/ux-ui-pro/btn-kit.svg)](https://github.com/ux-ui-pro/btn-kit)
 [![NPM Downloads](https://img.shields.io/npm/dm/btn-kit.svg?style=flat)](https://www.npmjs.org/package/btn-kit)
 
+</div>
 
-<sup>1kB gzipped</sup>
+<p align="center"><sup>1kB gzipped</sup></p>
 
-<p><a href="https://btn-kit.ux-ui.pro/build">Constructor</a><br>
+<p align="center"><a href="https://btn-kit.ux-ui.pro/build">Constructor</a><br>
 <a href="https://qpgzlf.csb.app/">Sandbox</a><br>
 <a href="https://btn-kit.ux-ui.pro/docs">Docs</a></p>
-</div>
 <br>
 
 **Install**
