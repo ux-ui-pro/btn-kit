@@ -1,8 +1,9 @@
 {
   "name": "btn-kit",
   "version": "0.0.1-alpha.2",
-  "description": "btn-kit is a customizable button component for web apps with built-in features like icon support, predefined styles, various button types and sizes, and UI customization.",
+  "description": "btn-kit is a Vue 3 component for creating buttons for web applications. Built-in features include icon support, different button types and sizes, states, effects.",
   "author": "ux-ui.pro",
+  "homepage": "https://btn-kit.ux-ui.pro/",
   "license": "MIT",
   "repository": {
     "type": "git",
