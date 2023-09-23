@@ -14,7 +14,7 @@
 <p align="center"><sup>1kB gzipped</sup></p>
 
 <p align="center"><a href="https://btn-kit.ux-ui.pro/build">Constructor</a><br>
-<a href="https://qpgzlf.csb.app/">Sandbox</a><br>
+<a href="https://codesandbox.io/s/btn-kit-npm-qpgzlf">Sandbox</a><br>
 <a href="https://btn-kit.ux-ui.pro/docs">Docs</a></p>
 <br>
 
