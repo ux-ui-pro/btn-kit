@@ -1,5 +1,6 @@
 <br>
-<p align="center"><h2>btn-kit</h2></p>
+<p align="center"><strong>btn-kit</strong></p>
+<p style="text-align: center;"><strong>btn-kit</strong></p>
 
 <p align="center"><sup>btn-kit is a Vue 3 component for creating buttons for web applications.<br>Built-in features include icon support, different button types and sizes, states, effects.</sup></p>
 
