@@ -1,3 +1,26 @@
+---
+title: "Untitled"
+author: "ux-ui.pro"
+output: html_document
+---
+
+<style type="text/css">
+body{
+  font-size: 18pt;
+}
+</style>
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+
+
+
 <div align="center">
 <br>
 
