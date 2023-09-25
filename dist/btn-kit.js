@@ -1,14 +1,14 @@
-import { ref as m, computed as p, onMounted as g, resolveComponent as _, openBlock as o, createElementBlock as f, normalizeClass as d, renderSlot as r, createBlock as y, withCtx as v, createCommentVNode as B } from "vue";
+import { ref as m, computed as p, onMounted as g, resolveComponent as _, openBlock as o, createElementBlock as c, normalizeClass as i, renderSlot as d, createBlock as y, withCtx as v, createCommentVNode as B } from "vue";
 class C {
   constructor() {
     this.init();
   }
-  ripple(l) {
-    const e = l.target.closest(".btn--ripple");
+  ripple(s) {
+    const e = s.target.closest(".btn--ripple");
     if (!e)
       return;
-    const n = getComputedStyle(e), i = parseFloat(n.width), s = parseFloat(n.height), a = Math.max(i, s), u = a / 2, c = e.getBoundingClientRect(), b = l.pageY - pageYOffset - (c.top + u), h = l.pageX - pageXOffset - (c.left + u);
-    e.style.cssText = `--size: ${Math.round(a)}px; --top: ${Math.round(b)}px; --left: ${Math.round(h)}px;`, e.classList.remove("btn--rippled"), requestAnimationFrame(() => {
+    const n = getComputedStyle(e), a = parseFloat(n.width), r = parseFloat(n.height), l = Math.max(a, r), u = l / 2, f = e.getBoundingClientRect(), b = s.pageY - pageYOffset - (f.top + u), h = s.pageX - pageXOffset - (f.left + u);
+    e.style.cssText = `--size: ${Math.round(l)}px; --top: ${Math.round(b)}px; --left: ${Math.round(h)}px;`, e.classList.remove("btn--rippled"), requestAnimationFrame(() => {
       e.classList.add("btn--rippled");
     });
   }
@@ -16,10 +16,10 @@ class C {
     document.addEventListener("pointerdown", this.ripple.bind(this));
   }
 }
-const k = (t, l) => {
+const k = (t, s) => {
   const e = t.__vccOpts || t;
-  for (const [n, i] of l)
-    e[n] = i;
+  for (const [n, a] of s)
+    e[n] = a;
   return e;
 }, x = {
   name: "Button",
@@ -61,10 +61,8 @@ const k = (t, l) => {
       default: ""
     }
   },
-  setup(t, { emit: l }) {
-    const e = m(null);
-    let n = null;
-    const i = p(() => {
+  setup(t, { emit: s }) {
+    const e = m(null), n = p(() => {
       let a = {
         btn: !0,
         "btn--sm": t.size === "sm",
@@ -78,46 +76,46 @@ const k = (t, l) => {
         [`btn--theme-${t.theme}`]: t.theme !== ""
       };
       return t.ripple && (a["btn--ripple"] = !0), t.progress && (a["btn--progress"] = !0), t.disabled && (a["btn--disabled"] = !0), a;
-    }), s = () => {
-      n = new C(), n.init(e.value);
-    };
+    });
     return g(() => {
-      t.ripple && s();
+      t.ripple && C(e.value);
     }), {
       buttonRef: e,
-      btnClass: i,
-      initRipple: s
+      btnClass: n
     };
   }
 }, S = ["disabled"], z = ["href", "disabled"];
-function w(t, l, e, n, i, s) {
-  const a = _("router-link");
-  return !e.route && !e.href ? (o(), f("button", {
+function R(t, s, e, n, a, r) {
+  const l = _("router-link");
+  return !e.route && !e.href ? (o(), c("button", {
     key: 0,
-    class: d(n.btnClass),
-    disabled: e.disabled
+    class: i(n.btnClass),
+    disabled: e.disabled,
+    ref: "buttonRef"
   }, [
-    r(t.$slots, "default")
-  ], 10, S)) : e.route ? (o(), y(a, {
+    d(t.$slots, "default")
+  ], 10, S)) : e.route ? (o(), y(l, {
     key: 1,
     to: e.route,
-    class: d(n.btnClass),
-    disabled: e.disabled ? !0 : void 0
+    class: i(n.btnClass),
+    disabled: e.disabled ? !0 : void 0,
+    ref: "buttonRef"
   }, {
     default: v(() => [
-      r(t.$slots, "default")
+      d(t.$slots, "default")
     ]),
     _: 3
-  }, 8, ["to", "class", "disabled"])) : e.href ? (o(), f("a", {
+  }, 8, ["to", "class", "disabled"])) : e.href ? (o(), c("a", {
     key: 2,
     href: e.href,
-    class: d(n.btnClass),
-    disabled: e.disabled ? !0 : void 0
+    class: i(n.btnClass),
+    disabled: e.disabled ? !0 : void 0,
+    ref: "buttonRef"
   }, [
-    r(t.$slots, "default")
+    d(t.$slots, "default")
   ], 10, z)) : B("", !0);
 }
-const R = /* @__PURE__ */ k(x, [["render", w]]);
+const w = /* @__PURE__ */ k(x, [["render", R]]);
 export {
-  R as default
+  w as default
 };
