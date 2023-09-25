@@ -1,16 +1,16 @@
-import { ref as b, computed as h, onMounted as _, resolveComponent as m, openBlock as o, createElementBlock as u, normalizeClass as s, renderSlot as i, createBlock as y, withCtx as g, createCommentVNode as x } from "vue";
-const B = (e) => {
-  e.addEventListener("pointerdown", (a) => {
-    const { clientX: t, clientY: n } = a.touches ? a.touches[0] : a, { left: l, top: r, width: d, height: f } = e.getBoundingClientRect(), c = Math.sqrt(Math.pow(d, 2) + Math.pow(f, 2)) * 2;
-    e.style.cssText = "--s: 0; --o: 1;", e.offsetTop, e.style.cssText = `--t: 1; --o: 0; --d: ${c.toFixed(1)}; --x:${(t - l).toFixed(1)}; --y:${(n - r).toFixed(1)};`;
+import { ref as u, computed as h, onMounted as _, resolveComponent as m, openBlock as s, createElementBlock as f, normalizeClass as i, renderSlot as r, createBlock as y, withCtx as g, createCommentVNode as v } from "vue";
+const x = (e) => {
+  e.addEventListener("pointerdown", (l) => {
+    const { clientX: t, clientY: n } = l.touches ? l.touches[0] : l, { left: d, top: a, width: o, height: c } = e.getBoundingClientRect(), b = Math.sqrt(Math.pow(o, 2) + Math.pow(c, 2)) * 2;
+    e.style.cssText = "--s: 0; --o: 1;", e.offsetTop, e.style.cssText = `--t: 1; --o: 0; --d: ${b.toFixed(1)}; --x:${(t - d).toFixed(1)}; --y:${(n - a).toFixed(1)};`;
   });
 };
-const k = (e, a) => {
+const B = (e, l) => {
   const t = e.__vccOpts || e;
-  for (const [n, l] of a)
-    t[n] = l;
+  for (const [n, d] of l)
+    t[n] = d;
   return t;
-}, v = {
+}, k = {
   name: "Button",
   props: {
     theme: {
@@ -50,9 +50,9 @@ const k = (e, a) => {
       default: ""
     }
   },
-  setup(e, { emit: a }) {
-    const t = b(null), n = h(() => {
-      let l = {
+  setup(e, { emit: l }) {
+    const t = u(null), n = u(!1), d = h(() => {
+      let a = {
         btn: !0,
         "btn--sm": e.size === "sm",
         "btn--md": e.size === "md",
@@ -64,47 +64,47 @@ const k = (e, a) => {
         "btn--text": e.variation === "text",
         [`btn--theme-${e.theme}`]: e.theme !== ""
       };
-      return e.ripple && (l["btn--ripple"] = !0), e.progress && (l["btn--progress"] = !0), e.disabled && (l["btn--disabled"] = !0), l;
+      return e.ripple && (a["btn--ripple"] = !0), e.progress && (a["btn--progress"] = !0), e.disabled && (a["btn--disabled"] = !0), a;
     });
     return _(() => {
-      e.ripple && B(t.value);
+      (e.ripple || n.value) && x(t.value);
     }), {
       buttonRef: t,
-      btnClass: n
+      btnClass: d
     };
   }
 }, C = ["disabled"], S = ["href", "disabled"];
-function w(e, a, t, n, l, r) {
-  const d = m("router-link");
-  return !t.route && !t.href ? (o(), u("button", {
+function R(e, l, t, n, d, a) {
+  const o = m("router-link");
+  return !t.route && !t.href ? (s(), f("button", {
     key: 0,
-    class: s(n.btnClass),
+    class: i(n.btnClass),
     disabled: t.disabled,
     ref: "buttonRef"
   }, [
-    i(e.$slots, "default")
-  ], 10, C)) : t.route ? (o(), y(d, {
+    r(e.$slots, "default")
+  ], 10, C)) : t.route ? (s(), y(o, {
     key: 1,
     to: t.route,
-    class: s(n.btnClass),
+    class: i(n.btnClass),
     disabled: t.disabled ? !0 : void 0,
     ref: "buttonRef"
   }, {
     default: g(() => [
-      i(e.$slots, "default")
+      r(e.$slots, "default")
     ]),
     _: 3
-  }, 8, ["to", "class", "disabled"])) : t.href ? (o(), u("a", {
+  }, 8, ["to", "class", "disabled"])) : t.href ? (s(), f("a", {
     key: 2,
     href: t.href,
-    class: s(n.btnClass),
+    class: i(n.btnClass),
     disabled: t.disabled ? !0 : void 0,
     ref: "buttonRef"
   }, [
-    i(e.$slots, "default")
-  ], 10, S)) : x("", !0);
+    r(e.$slots, "default")
+  ], 10, S)) : v("", !0);
 }
-const R = /* @__PURE__ */ k(v, [["render", w]]);
+const w = /* @__PURE__ */ B(k, [["render", R]]);
 export {
-  R as default
+  w as default
 };
