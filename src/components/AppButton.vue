@@ -282,10 +282,6 @@ export default {
 
 		background-color: transparent;
 		box-shadow: inset 0 0 0 var(--bk-border-width, 1px) var(--bk-outline-color, var(--bk-background));
-
-		[class*="icon"] {
-			--bk-color: var(--bk-background);
-		}
 	}
 
 	&--text {
