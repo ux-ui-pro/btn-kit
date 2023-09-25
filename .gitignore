@@ -1,10 +1,18 @@
-/.idea
-/node_modules
-/.parcel-cache
-/.parcel
-/**/*.log
-/**/*.txt
+# Files
+*~
+.DS_Store
 Thumbs.db
 memo.md
+
+# Build & Packages
+node_modules/
+dist/
+
+# IDE
+.idea/
+
+# Other
+*.log
+*.txt
 package-lock.json
 yarn.lock

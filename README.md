@@ -23,43 +23,43 @@
 ```console
 $ yarn add btn-kit
 ```
+
 <br>
 
 **Import**
 
 ```javascript
-import AppButton from 'btn-kit'
-import 'btn-kit/dist/index.css'
+import AppButton from "btn-kit";
+import "btn-kit/dist/index.css";
 
-app.component('AppButton', AppButton)
+app.component("AppButton", AppButton);
 ```
+
 <br>
 
 **Usage**
 
 ```vue
 <template>
-    <AppButton
-        theme="awesome"
-        size="md"
-    >
-        <span class="label">Text</span>
-    </AppButton>
+  <AppButton theme="awesome" size="md">
+    <span class="label">Text</span>
+  </AppButton>
 </template>
 
 <style lang="scss">
 .btn--theme {
-    &-awesome {
-        --bk-background-h: 180;
-        --bk-background-s: 100%;
-        --bk-background-l: 25%;
-        --bk-color-h: 0;
-        --bk-color-s: 0%;
-        --bk-color-l: 90%;
-    }
+  &-awesome {
+    --bk-background-h: 180;
+    --bk-background-s: 100%;
+    --bk-background-l: 25%;
+    --bk-color-h: 0;
+    --bk-color-s: 0%;
+    --bk-color-l: 90%;
+  }
 }
 </style>
 ```
+
 <br>
 
 **License**

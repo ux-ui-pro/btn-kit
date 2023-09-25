@@ -1,9 +1,9 @@
 <script>
 import { ref, computed, onMounted } from "vue";
-import ripple from "../utils/ripple.js";
+import ripple from "../utils/ripple";
 
 export default {
-  name: "Button",
+  name: "AppButton",
   props: {
     theme: {
       type: String,
@@ -46,11 +46,11 @@ export default {
       default: false,
     },
   },
-  setup(props, { emit }) {
+  setup(props) {
     const buttonRef = ref(null);
 
     const btnClass = computed(() => {
-      let classes = {
+      const classes = {
         btn: true,
         "btn--sm": props.size === "sm",
         "btn--md": props.size === "md",
@@ -123,7 +123,8 @@ export default {
 
 <style lang="scss">
 @mixin transition {
-  transition-property: background-color, color, fill, stroke, opacity, box-shadow;
+  transition-property: background-color, color, fill, stroke, opacity,
+    box-shadow;
   transition-duration: 225ms;
 }
 
@@ -180,8 +181,14 @@ export default {
 }
 
 .btn {
-  --bk-background: hsla(var(--bk-background-h, 0) var(--bk-background-s, 0%) var(--bk-background-l, 68%) / var(--bk-background-a, 1));
-  --bk-color: hsla(var(--bk-color-h, 0) var(--bk-color-s, 0%) var(--bk-color-l, 0%) / var(--bk-color-a, 1));
+  --bk-background: hsla(
+    var(--bk-background-h, 0) var(--bk-background-s, 0%)
+      var(--bk-background-l, 68%) / var(--bk-background-a, 1)
+  );
+  --bk-color: hsla(
+    var(--bk-color-h, 0) var(--bk-color-s, 0%) var(--bk-color-l, 0%) /
+      var(--bk-color-a, 1)
+  );
 
   font-family: inherit;
   font-size: var(--bk-font-size, 16px);
@@ -207,7 +214,7 @@ export default {
   user-select: none;
   line-height: 1;
   font-weight: var(--bk-font-weight, 500);
-  letter-spacing: var(--bk-letter-spacing, .1em);
+  letter-spacing: var(--bk-letter-spacing, 0.1em);
   -webkit-tap-highlight-color: transparent;
   transform: translate3d(0, 0, 0);
 
@@ -218,11 +225,17 @@ export default {
     --bk-background-hover-l: calc(var(--bk-background-l, 68%) - 10%);
 
     &:not(.btn--outlined):not(.btn--text) {
-      background-color: hsla(var(--bk-background-h, 0) var(--bk-background-hover-s, 0%) var(--bk-background-hover-l, 68%) / var(--bk-background-a, 1));
+      background-color: hsla(
+        var(--bk-background-h, 0) var(--bk-background-hover-s, 0%)
+          var(--bk-background-hover-l, 68%) / var(--bk-background-a, 1)
+      );
     }
 
     &:not(.btn--contained) {
-      background-color: hsla(var(--bk-background-h, 0) var(--bk-background-hover-s, 0%) var(--bk-background-hover-l, 68%) / 0.08);
+      background-color: hsla(
+        var(--bk-background-h, 0) var(--bk-background-hover-s, 0%)
+          var(--bk-background-hover-l, 68%) / 0.08
+      );
     }
   }
 
@@ -231,11 +244,17 @@ export default {
     --bk-background-active-l: calc(var(--bk-background-l, 68%) - 25%);
 
     &:not(.btn--ripple):not(.btn--outlined):not(.btn--text) {
-      background-color: hsla(var(--bk-background-h, 0) var(--bk-background-active-s, 0%) var(--bk-background-active-l, 68%) / var(--bk-background-a, 1));
+      background-color: hsla(
+        var(--bk-background-h, 0) var(--bk-background-active-s, 0%)
+          var(--bk-background-active-l, 68%) / var(--bk-background-a, 1)
+      );
     }
 
     &:not(.btn--ripple) {
-      background-color: hsla(var(--bk-background-h, 0) var(--bk-background-active-s, 0%) var(--bk-background-active-l, 68%) / .28);
+      background-color: hsla(
+        var(--bk-background-h, 0) var(--bk-background-active-s, 0%)
+          var(--bk-background-active-l, 68%) / 0.28
+      );
     }
   }
 
@@ -259,7 +278,11 @@ export default {
     @include transition;
 
     &:first-child {
-      margin: 0 calc(calc(var(--bk-button-size, 52px) / 2) + calc(var(--bk-icon-size, 24px) * -1 / 2));
+      margin: 0
+        calc(
+          calc(var(--bk-button-size, 52px) / 2) +
+            calc(var(--bk-icon-size, 24px) * -1 / 2)
+        );
     }
 
     &:not(:last-child) {
@@ -281,7 +304,8 @@ export default {
     --bk-color: var(--bk-background);
 
     background-color: transparent;
-    box-shadow: inset 0 0 0 var(--bk-border-width, 1px) var(--bk-outline-color, var(--bk-background));
+    box-shadow: inset 0 0 0 var(--bk-border-width, 1px)
+      var(--bk-outline-color, var(--bk-background));
   }
 
   &--text {
@@ -294,7 +318,7 @@ export default {
 
   &--ripple {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       border-radius: 50%;
@@ -302,15 +326,19 @@ export default {
 
       top: calc(var(--y) * 1px);
       left: calc(var(--x) * 1px);
-      width:  calc(var(--d) * 1px);
+      width: calc(var(--d) * 1px);
       height: calc(var(--d) * 1px);
 
       opacity: calc(var(--o, 1) * var(--bk-ripple-opacity, 0.45));
-      transition: calc(var(--t, 0) * var(--bk-ripple-duration, 750ms)) var(--bk-ripple-easing, cubic-bezier(0.61, 1, 0.88, 1));
+      transition: calc(var(--t, 0) * var(--bk-ripple-duration, 750ms))
+        var(--bk-ripple-easing, cubic-bezier(0.61, 1, 0.88, 1));
       transform: translate(-50%, -50%) scale(var(--s, 1));
       transform-origin: center;
 
-      background-color: var(--bk-ripple-color, hsla(var(--bk-background-h) 20% 65% / var(--bk-background-a, 1)));
+      background-color: var(
+        --bk-ripple-color,
+        hsla(var(--bk-background-h) 20% 65% / var(--bk-background-a, 1))
+      );
     }
   }
 
@@ -321,7 +349,7 @@ export default {
     pointer-events: none;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       inset: 0;
       margin: auto;
@@ -329,11 +357,22 @@ export default {
       height: 24px;
       padding: 5px;
       box-sizing: border-box;
-      -webkit-mask: linear-gradient(hsl(0 0% 75%) 0 0) content-box, linear-gradient(hsl(0 0% 75%) 0 0);
-      mask: linear-gradient(hsl(0 0% 75%) 0 0) content-box, linear-gradient(hsl(0 0% 75%) 0 0);
+      -webkit-mask:
+        linear-gradient(hsl(0 0% 75%) 0 0) content-box,
+        linear-gradient(hsl(0 0% 75%) 0 0);
+      mask:
+        linear-gradient(hsl(0 0% 75%) 0 0) content-box,
+        linear-gradient(hsl(0 0% 75%) 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
-      background-image: conic-gradient(from 45deg, transparent, var(--bk-ripple-color, hsla(var(--bk-background-h) 50% 75% / var(--bk-background-a, 1))));
+      background-image: conic-gradient(
+        from 45deg,
+        transparent,
+        var(
+          --bk-ripple-color,
+          hsla(var(--bk-background-h) 50% 75% / var(--bk-background-a, 1))
+        )
+      );
       border-radius: 24px;
       animation: Spin 825ms linear infinite;
 
