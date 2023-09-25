@@ -195,7 +195,7 @@ export default {
   background-color: var(--bk-background);
   color: var(--bk-color);
   height: var(--bk-button-size, 52px);
-  overflow: clip;
+  overflow: hidden;
   position: relative;
   display: inline-flex;
   align-items: center;
