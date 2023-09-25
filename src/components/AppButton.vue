@@ -41,10 +41,13 @@ export default {
       type: String,
       default: "",
     },
+    forceRipple: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup(props, { emit }) {
     const buttonRef = ref(null);
-    const forceRipple = ref(false);
 
     const btnClass = computed(() => {
       let classes = {
@@ -76,7 +79,7 @@ export default {
     });
 
     onMounted(() => {
-      if (props.ripple || forceRipple.value) {
+      if (props.ripple || props.forceRipple) {
         ripple(buttonRef.value);
       }
     });
