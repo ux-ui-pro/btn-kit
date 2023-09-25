@@ -1,31 +1,15 @@
-export default class ButtonRipple {
-	constructor() {
-		this.init()
-	}
+const ripple = (button) => {
+	button.addEventListener("pointerdown", (event) => {
+		const { clientX, clientY } = event.touches ? event.touches[0] : event;
+		const { left, top, width, height } = button.getBoundingClientRect();
+		const distance = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2)) * 2;
 
-	ripple(e) {
-		const button = e.target.closest('.btn--ripple')
+		button.style.cssText = `--s: 0; --o: 1;`;
+		button.offsetTop;
+		button.style.cssText = `--t: 1; --o: 0; --d: ${distance.toFixed(1)}; --x:${(
+			clientX - left
+		).toFixed(1)}; --y:${(clientY - top).toFixed(1)};`;
+	});
+};
 
-		if (!button) return
-
-		const computedStyle = getComputedStyle(button)
-		const width = parseFloat(computedStyle.width)
-		const height = parseFloat(computedStyle.height)
-		const diameter = Math.max(width, height)
-		const radius = diameter / 2
-		const vpOffset = button.getBoundingClientRect()
-		const top = e.pageY - pageYOffset - (vpOffset.top + radius)
-		const left = e.pageX - pageXOffset - (vpOffset.left + radius)
-
-		button.style.cssText = `--size: ${Math.round(diameter)}px; --top: ${Math.round(top)}px; --left: ${Math.round(left)}px;`
-		button.classList.remove('btn--rippled')
-
-		requestAnimationFrame(() => {
-			button.classList.add('btn--rippled')
-		})
-	}
-
-	init() {
-		document.addEventListener('pointerdown', this.ripple.bind(this))
-	}
-}
+export default ripple;
