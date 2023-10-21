@@ -122,12 +122,6 @@ export default {
 </template>
 
 <style lang="scss">
-@mixin transition {
-  transition-property: background-color, color, fill, stroke, opacity,
-    box-shadow;
-  transition-duration: 225ms;
-}
-
 .btn-group {
   display: flex;
   align-items: center;
@@ -217,8 +211,8 @@ export default {
   letter-spacing: var(--bk-letter-spacing, 0.1em);
   -webkit-tap-highlight-color: transparent;
   transform: translate3d(0, 0, 0);
-
-  @include transition;
+  transition-property: background-color, color, opacity, box-shadow;
+  transition-duration: 225ms;
 
   &:hover {
     --bk-background-hover-s: calc(var(--bk-background-s, 0%) - 5%);
@@ -274,8 +268,8 @@ export default {
     fill: var(--bk-color);
     width: var(--bk-icon-size, 24px);
     height: var(--bk-icon-size, 24px);
-
-    @include transition;
+    transition-property: fill, stroke;
+    transition-duration: 225ms;
 
     &:first-child {
       margin: 0
