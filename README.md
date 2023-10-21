@@ -1,8 +1,6 @@
 <br>
 <p align="center"><strong>btn-kit</strong></p>
 
-<p align="center"><sup>btn-kit is a Vue 3 component for creating buttons for web applications.<br>Built-in features include icon support, different button types and sizes, states, effects.</sup></p>
-
 <div align="center">
 
 [![npm](https://img.shields.io/npm/v/btn-kit.svg?colorB=brightgreen)](https://www.npmjs.com/package/btn-kit)
@@ -11,22 +9,22 @@
 
 </div>
 
+<p align="center">btn-kit is a Vue 3 component for creating buttons for web applications.<br>Built-in features include icon support, different button types and sizes, states, effects.</p>
 <p align="center"><sup>1kB gzipped</sup></p>
-
 <p align="center"><a href="https://btn-kit.ux-ui.pro/build">Constructor</a><br>
 <a href="https://codesandbox.io/s/btn-kit-npm-qpgzlf">Sandbox</a><br>
 <a href="https://btn-kit.ux-ui.pro/docs">Docs</a></p>
 <br>
 
-**Install**
+&#10148; **Install**
 
 ```console
-$ yarn add btn-kit
+yarn add btn-kit
 ```
 
 <br>
 
-**Import**
+&#10148; **Import**
 
 ```javascript
 import AppButton from "btn-kit";
@@ -37,7 +35,7 @@ app.component("AppButton", AppButton);
 
 <br>
 
-**Usage**
+&#10148; **Usage**
 
 ```vue
 <template>
@@ -62,6 +60,6 @@ app.component("AppButton", AppButton);
 
 <br>
 
-**License**
+&#10148; **License**
 
 btn-kit is released under MIT license
