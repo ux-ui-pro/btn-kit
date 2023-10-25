@@ -208,7 +208,7 @@ export default {
   user-select: none;
   line-height: 1;
   font-weight: var(--bk-font-weight, 500);
-  letter-spacing: var(--bk-letter-spacing, 0.1em);
+  letter-spacing: var(--bk-letter-spacing, 0.025em);
   -webkit-tap-highlight-color: transparent;
   transform: translate3d(0, 0, 0);
   transition-property: background-color, color, opacity, box-shadow;
