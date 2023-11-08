@@ -214,41 +214,43 @@ export default {
   transition-property: background-color, color, opacity, box-shadow;
   transition-duration: 225ms;
 
-  &:hover {
-    --bk-background-hover-s: calc(var(--bk-background-s, 0%) - 5%);
-    --bk-background-hover-l: calc(var(--bk-background-l, 68%) - 10%);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      --bk-background-hover-s: calc(var(--bk-background-s, 0%) - 5%);
+      --bk-background-hover-l: calc(var(--bk-background-l, 68%) - 10%);
 
-    &:not(.btn--outlined):not(.btn--text) {
-      background-color: hsla(
-        var(--bk-background-h, 0) var(--bk-background-hover-s, 0%)
-          var(--bk-background-hover-l, 68%) / var(--bk-background-a, 1)
-      );
+      &:not(.btn--outlined):not(.btn--text) {
+        background-color: hsla(
+          var(--bk-background-h, 0) var(--bk-background-hover-s, 0%)
+            var(--bk-background-hover-l, 68%) / var(--bk-background-a, 1)
+        );
+      }
+
+      &:not(.btn--contained) {
+        background-color: hsla(
+          var(--bk-background-h, 0) var(--bk-background-hover-s, 0%)
+            var(--bk-background-hover-l, 68%) / 0.08
+        );
+      }
     }
 
-    &:not(.btn--contained) {
-      background-color: hsla(
-        var(--bk-background-h, 0) var(--bk-background-hover-s, 0%)
-          var(--bk-background-hover-l, 68%) / 0.08
-      );
-    }
-  }
+    &:active {
+      --bk-background-active-s: calc(var(--bk-background-s, 0%) - 7.5%);
+      --bk-background-active-l: calc(var(--bk-background-l, 68%) - 25%);
 
-  &:active {
-    --bk-background-active-s: calc(var(--bk-background-s, 0%) - 7.5%);
-    --bk-background-active-l: calc(var(--bk-background-l, 68%) - 25%);
+      &:not(.btn--ripple):not(.btn--outlined):not(.btn--text) {
+        background-color: hsla(
+                        var(--bk-background-h, 0) var(--bk-background-active-s, 0%)
+                        var(--bk-background-active-l, 68%) / var(--bk-background-a, 1)
+        );
+      }
 
-    &:not(.btn--ripple):not(.btn--outlined):not(.btn--text) {
-      background-color: hsla(
-        var(--bk-background-h, 0) var(--bk-background-active-s, 0%)
-          var(--bk-background-active-l, 68%) / var(--bk-background-a, 1)
-      );
-    }
-
-    &:not(.btn--ripple) {
-      background-color: hsla(
-        var(--bk-background-h, 0) var(--bk-background-active-s, 0%)
-          var(--bk-background-active-l, 68%) / 0.28
-      );
+      &:not(.btn--ripple) {
+        background-color: hsla(
+                        var(--bk-background-h, 0) var(--bk-background-active-s, 0%)
+                        var(--bk-background-active-l, 68%) / 0.28
+        );
+      }
     }
   }
 
